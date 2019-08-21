@@ -445,25 +445,25 @@ function Base() {
             });
         }
         // 使用 prettify 代码样式
-        function prettifyCode() {
-            pre.addClass('prettyprint');
-            switch (hltheme) {
-                case 'prettify':
-                    setCodeBefore();
-                    require(['codePrettify'], function() {
-                        $('pre').css('background-color', '#f6f8fa').css('border', '0'); setPrettifyCopy();
-                    });break;
-                case 'desert':
-                    setCodeBefore(); require(['codeDesert'], function() { setPrettifyCopy(); });break;
-                case 'sunburst':
-                    setCodeBefore(); require(['codeSunburst'], function() { setPrettifyCopy(); }); break;
-                case 'obsidian':
-                    setCodeBefore(); require(['codeObsidian'], function() { setPrettifyCopy(); }); break;
-                case 'doxy':
-                    setCodeBefore(); require(['codeDoxy'], function() { setPrettifyCopy(); }); break;
-                default: cnblogsCode(); break;
-            }
-        }
+        // function prettifyCode() {
+        //     pre.addClass('prettyprint');
+        //     switch (hltheme) {
+        //         case 'prettify':
+        //             setCodeBefore();
+        //             require(['codePrettify'], function() {
+        //                 $('pre').css('background-color', '#f6f8fa').css('border', '0'); setPrettifyCopy();
+        //             });break;
+        //         case 'desert':
+        //             setCodeBefore(); require(['codeDesert'], function() { setPrettifyCopy(); });break;
+        //         case 'sunburst':
+        //             setCodeBefore(); require(['codeSunburst'], function() { setPrettifyCopy(); }); break;
+        //         case 'obsidian':
+        //             setCodeBefore(); require(['codeObsidian'], function() { setPrettifyCopy(); }); break;
+        //         case 'doxy':
+        //             setCodeBefore(); require(['codeDoxy'], function() { setPrettifyCopy(); }); break;
+        //         default: cnblogsCode(); break;
+        //     }
+        // }
 
         function setCodeBefore() {
             $.each(codePre, function (i) {

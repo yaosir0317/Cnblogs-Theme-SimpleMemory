@@ -34,25 +34,25 @@ function myTools() {
     this.consoleText = function(list, mode) {
         rHref = 'https://github.com/'+window.cnblogsConfig.GhUserName+'/'+window.cnblogsConfig.GhRepositories+'/tree/'+window.cnblogsConfig.GhVersions;
         var e = ["\n %c %c %c Theme GitHub - "+(window.cnblogsConfig.GhVersions).substring(0,7)+" %c  %c "+rHref+"  %c \n\n", "background: #fadfa3; padding:5px 0;", "background: #fadfa3; padding:5px 0;", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;", "background: #FCEDC9; padding:5px 0;", "background: #fadfa3; padding:5px 0;"];
-        window.console.log.apply(console, e);
+        // window.console.log.apply(console, e);
         switch (mode) {
             case 'random':
                 var colorList = [colors.red, colors.orange, colors.yellow, colors.green, colors.teal, colors.blue, colors.purple, colors.brown];
                 $.each(list, function (i) {
                     var str = (list[i]).toString();
                     var ind = bndongTools.randomNum(0, colorList.length - 1);
-                    console.log('%c'+str, colorList[ind]);
+                    // console.log('%c'+str, colorList[ind]);
                 });
                 break;
             case 'banner':
                 $.each(list, function (i) {
                     var fl = list[i];
-                    console.log('\n' + ' %c '+(fl[0])+' %c '+(fl[1])+' ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
+                    // console.log('\n' + ' %c '+(fl[0])+' %c '+(fl[1])+' ' + '\n', 'color: #fadfa3; background: #030307; padding:5px 0;', 'background: #fadfa3; padding:5px 0;');
                 });
                 break;
 
             default:
-                console.log('%c'+list.join('\n'), colors.gray);
+                // console.log('%c'+list.join('\n'), colors.gray);
                 break;
         }
     };

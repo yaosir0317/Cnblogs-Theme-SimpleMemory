@@ -107,7 +107,7 @@ function Base() {
         bndongJs.setPageAnimationControl();
 
         // 控制台输出
-        tools.consoleText(window.cnblogsConfig.consoleList, 'banner');
+        // tools.consoleText(window.cnblogsConfig.consoleList, 'banner');
 
         // 延时清除全部定时器
         setTimeout(bndongJs.clearIntervalAll, 30000);
